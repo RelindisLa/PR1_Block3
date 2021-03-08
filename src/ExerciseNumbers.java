@@ -19,6 +19,9 @@ public class ExerciseNumbers {
 
         System.out.println(Arrays.toString(findDubleArray(arr)));
 
+        //System.out.println("folgende Zahlen sind mehrfach: " + Arrays.toString(returnDublicates(arr)));
+
+
     }
 
     // TODO 1: Write a method, finding and returning the smallest number
@@ -68,6 +71,23 @@ public class ExerciseNumbers {
         }
         return arr;
     }
+/*
+    public static int[] returnDublicates (int[] arr) {
+        boolean sameNr = true;
+        while (sameNr == true) {
+            sameNr = false;
+            int i1 = arr[0];
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == i1) {
+                    i1 = arr[i];
+                    int temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                }
+            }
+        }
+        return arr;
+    } */
 
 
 }
