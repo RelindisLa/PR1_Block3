@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class SortDemoApp {
     public static void main(String[] args) {
 
-        int[] arr = new int[7];
+        /*int[] arr = new int[7];
         arr [0] = 9;
         arr [1] = 8;
         arr [2] = 7;
@@ -14,27 +14,32 @@ public class SortDemoApp {
         arrangeOrder(arr);
         System.out.println();
         System.out.println(Arrays.toString(arr));
-        /*int[] arr2 = {54, 45, 33, 12, 77, 21, 99};
-        arrangeOrder(arr2);
-        Arrays.toString(arr) ist das gleiche wie:
+        Arrays.toString(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + ", ");
         } */
 
+        int[] arr = {54, 45, 33, 12, 77, 21, 99, 1, 0};
+        arrangeOrder(arr);
 
-        //for ()
+        boolean hasChanged = true;
 
-        for (int i = 0; i < arr.length -1; i++) {
-            if (arr [i] > arr[i+1]){
-                int temp = arr[i];
-                arr[i] = arr[i+1];
-                arr[i+1] = temp;
+        while (hasChanged == true) {
+            hasChanged = false;
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    hasChanged = true;
+
+                    int temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                }
+
             }
-
         }
         System.out.println(Arrays.toString(arr));
 
-        }
+    }
 
 
     public static void arrangeOrder(int[] numbers) {
