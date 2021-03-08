@@ -34,7 +34,6 @@ public class SortDemoApp {
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
                 }
-
             }
         }
         System.out.println(Arrays.toString(arr));
