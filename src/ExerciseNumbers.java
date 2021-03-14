@@ -17,7 +17,7 @@ public class ExerciseNumbers<arr> {
 
         //System.out.println("die Durchschnittszahl ist: " + findAverage(arr));
 
-        //System.out.println(Arrays.toString(findDubleArray(arr)));
+        //System.out.println(Arrays.toString(numberOfDublicates(arr)));
 
         //System.out.println("folgende Zahlen sind mehrfach: " + (Arrays.toString(returnDublicates(2, 3, 20))));
 
@@ -135,13 +135,35 @@ public class ExerciseNumbers<arr> {
     // TODO: version 4:
 
 
+    public static int numberOfDublicates (int[] numbers) {
+        int counter = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0 + i; j < numbers.length - 1; j++) {
+                if (i != j) {
+                    if (numbers[i] == numbers[j]) {
+                        counter++;
+                    }
+                }
+            }
+        }
+        return counter;
+    }
 
-    public static int [] findDoubleNumbers (int[] arr) {
+    public static int[] findDoubleNumbers(int[] arr) {
         Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
+        int[] doppelteZahl = new int[] {};
+        int counter = 0;
 
 
-        return arr;
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    arr[i] = doppelteZahl[counter];
+                    counter++;
+                }
+            }
+        }
+        return doppelteZahl;
     }
 
 }
