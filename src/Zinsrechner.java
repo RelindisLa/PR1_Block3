@@ -11,11 +11,11 @@ public class Zinsrechner {
  */
 
 
-        double result = calcInterest(1000, 1.5, 10);
+        double result = calcInterest(100, 1.5, 20);
         System.out.println("result = " + result);
 
     }
-    public static double calcInterest(double startCapital,double rates, int year) {
+    public static double calcInterest(double startCapital, double rates, int year) {
         for (int i = 1; i <= year; i++) {
             double calc = startCapital * (1 + rates / 100.0);
             System.out.println("End of " + i + " year: " + startCapital + " -> " + calc );

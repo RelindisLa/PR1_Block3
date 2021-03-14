@@ -7,8 +7,6 @@ public class LottoNummern2 {
         System.out.println("Unser Quicktipps");
 
         int [] intArray = new int [6];
-        int j = 0;
-
         int range = 45;
 
         for (int tipps = 0; tipps < 5; tipps++) {
@@ -24,8 +22,8 @@ public class LottoNummern2 {
     }
 
     public static int[] generateOneTipp(){
-                int[] oneTipp = new int [5];
-                for (int i = 0; 9 < oneTipp.length; i++){
+                int[] oneTipp = new int [6];
+                for (int i = 0; 7 < oneTipp.length; i++){
                     oneTipp[i] = generateOneNumber(45);
                     }
                 return oneTipp;

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class ExerciseNumbers {
+public class ExerciseNumbers<arr> {
     public static void main(String[] args) {
         int[] arr = {
                 98, 97, 87, 86, 3, 81, 77, 74, 72, 69, 68, 65, 61,
@@ -19,7 +19,11 @@ public class ExerciseNumbers {
 
         //System.out.println(Arrays.toString(findDubleArray(arr)));
 
-        System.out.println("folgende Zahlen sind mehrfach: " + Arrays.toString(returnDublicates(arr)));
+        //System.out.println("folgende Zahlen sind mehrfach: " + (Arrays.toString(returnDublicates(2, 3, 20))));
+
+        //System.out.println(Arrays.toString(dublicates(arr)));
+        System.out.println("folgende Nummern sind doppelt: " + (Arrays.toString(findDoubleNumbers(arr))));
+
 
 
     }
@@ -29,7 +33,7 @@ public class ExerciseNumbers {
         int keep = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < keep) {
-                keep = arr[i];
+                arr[i] = keep;
             }
         }
         return keep;
@@ -65,6 +69,7 @@ public class ExerciseNumbers {
 
 
     // TODO 5 (complicated): Write a method, which returns an array with duplicated numbers (81, 51)
+    // TODO: version 1:
     /*public static int[] findDubleArray (int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             arr [i] = arr [i]*2;
@@ -74,28 +79,81 @@ public class ExerciseNumbers {
 
      */
 
+// TODO: version 2:
+     /* public static int[] dublicateArrayMulitplication (int[] numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = 2;
+            }
+        return numbers;
+    }
+     */
 
-    public static int[] returnDublicates (int[] arr) {
-        boolean aufsteigend = true;
-
-        while (aufsteigend == true) {
-            aufsteigend = false;
-            for (int i =0; i < arr.length; i++) {
-                for (int i2 =i + 1; i2 < arr.length; i2++) {
-                    if (i < i2);
+// TODO: version 3:
+    /*
+    public static int[] dublicates (int[] numbers) {
+        int counter = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0+i; j < numbers.length -1; j++) {
+                if (i != j) {
+                    if (numbers[i] == numbers[j]) {
+                        counter++;
                     }
-                return arr;
                 }
+            }
+        }
+        int [] dublicates = new int [numberOfDublicates(numbers)];
+        counter = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = i+1; j < numbers.length -1; j++) {
+                if (i != j) {
+                    if (numbers[i] == numbers[j]){
+                        dublicates[counter] = numbers[i];
+                        counter++;
+                    }
+                }
+            }
+        }
+        return dublicates;
+    }
+
+    public static int numberOfDublicates (int[] numbers) {
+        int counter = 0;
+        for (int i = 0; i< numbers.length; i++) {
+            for (int j = 0+i; j < numbers.length-1; j++) {
+                if (i != j) {
+                    if (numbers[i] == numbers[j]) {
+                        counter++;
+                    }
+                }
+            }
+        }
+        return counter;
+    }
+
+     */
+    // TODO: version 4:
+
+
+
+    public static int [] findDoubleNumbers (int[] arr) {
+        boolean hasChanged = true;
+
+        while (hasChanged == true) {
+            hasChanged = false;
             for (int i = 0; i < arr.length - 1; i++) {
                 if (arr[i] > arr[i + 1]) {
-                    aufsteigend = true;
+                    hasChanged = true;
+
                     int temp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
-                    }
                 }
-            }return arr;
+            }
         }
+
+
+        return arr;
+    }
 
 }
 
