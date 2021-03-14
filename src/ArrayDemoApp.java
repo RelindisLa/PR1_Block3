@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArrayDemoApp {
     public static void main(String[] args) {
 
@@ -9,7 +11,7 @@ public class ArrayDemoApp {
 
 
 
-        int [ ] intArray = new int [5];  // statt zu benennen a, b, c, d, e, || int z1, z2, z3, z4, z5;
+        int [] intArray = new int [5];  // statt zu benennen a, b, c, d, e, || int z1, z2, z3, z4, z5;
         intArray[0] = 1;
         intArray[1] = 45;
         intArray[2] = 36;
@@ -18,8 +20,13 @@ public class ArrayDemoApp {
 
         for (int i = 0; i < 5; i++) {
             System.out.println(intArray[i] + ", ");
+            System.out.print(Arrays.toString(sortiereZahlen(intArray)));
 
         }
-
     }
+    public static int [] sortiereZahlen (int[] arr) {
+        Arrays.sort(arr);
+        return arr;
+    }
+
 }

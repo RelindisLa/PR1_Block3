@@ -9,9 +9,9 @@ public class Ubungsblatt2 {
         int n = 8;
 
         if ((-9 <= n) && (n <= +9)) {
-        n = 2 * n;
+        int m = 2 * n;
             System.out.println("D " + n + " war einstellig und wurde");
-            System.out.println("E verdoppelt zu "  + n);
+            System.out.println("E verdoppelt zu "  + m);
         }
     }
 }
