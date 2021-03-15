@@ -27,8 +27,10 @@ public class ExerciseNumbers2 {
             int keep = arr[i];
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] == keep) {
+                    System.out.println(arr[j]);
                     arr[j] = doppelteZahl[counter];
                     counter++;
+                    doppelteZahl[counter] = i;
                 }
             }
         }

@@ -60,13 +60,11 @@ public class ExerciseNumbers<arr> {
 
 
     // TODO 4: Write a method, calculating and returning the average over all numbers
-    /*public static int findAverage (int[] arr) {
+    public static int findAverage (int[] arr) {
 
         int average = findSumme(arr) / arr.length;
         return average;
     }
-
-     */
 
 
     // TODO 5 (complicated): Write a method, which returns an array with duplicated numbers (81, 51)
@@ -80,7 +78,7 @@ public class ExerciseNumbers<arr> {
 
      */
 
-// TODO: version 2:
+    // TODO: version 2:
      /* public static int[] dublicateArrayMulitplication (int[] numbers) {
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = 2;
@@ -89,7 +87,7 @@ public class ExerciseNumbers<arr> {
     }
      */
 
-// TODO: version 3:
+    // TODO: version 3:
     /*
     public static int[] dublicates (int[] numbers) {
         int counter = 0;
@@ -131,35 +129,20 @@ public class ExerciseNumbers<arr> {
         return counter;
     }
 
-     */
+    */
     // TODO: version 4:
-
-
-    public static int numberOfDublicates (int[] numbers) {
-        int counter = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0 + i; j < numbers.length - 1; j++) {
-                if (i != j) {
-                    if (numbers[i] == numbers[j]) {
-                        counter++;
-                    }
-                }
-            }
-        }
-        return counter;
-    }
 
     public static int[] findDoubleNumbers(int[] arr) {
         Arrays.sort(arr);
-        int[] doppelteZahl = new int[] {};
-        int counter = 0;
-
+        int[] doppelteZahl = new int[arr.length];
+        int zähler = 0;
 
         for (int i = 0; i < arr.length - 1; i++) {
+            int keep = arr[i];
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] == arr[j]) {
-                    arr[i] = doppelteZahl[counter];
-                    counter++;
+                if (arr[j] == keep) {
+                    arr[j] = doppelteZahl[zähler];
+                    zähler++;
                 }
             }
         }
