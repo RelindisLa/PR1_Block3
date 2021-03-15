@@ -14,8 +14,8 @@ public class RechteckeApp {
         B.breite = 100;
         B.name = "B";
 
-        C.länge = -20;
-        C.breite = -20;
+        C.länge = -80;
+        C.breite = -100;
         C.name = "C";
 
         A.print();
