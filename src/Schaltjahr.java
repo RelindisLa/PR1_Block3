@@ -1,40 +1,57 @@
 public class Schaltjahr {
 
     public static void main(String[] args) {
+
+
+        /*Lehrvortrag:
+
         int year = 0;
+        int count = 0;
+        for (int i = 0; i <= 2100; i++) {
+            if (isLeapYear(i, true))
+            {
+                count++;
+            }
+        }
+        System.out.println("count = " + count);
+
+         */
+
 
         isLeapYear(1992);
         isLeapYear(2000);
         isLeapYear(1991);
 
-        System.out.println(allLeapYear(0));
-
-        /*int count = 0;
-        for (int i = 0; i<= 2100; i++) {
-            if (isLeapYear(i)) {
-                count++;
-            }
-        }
-
-         */
-
-
-
+        System.out.println(allLeapYear(0) + " so viele Jahre");
 
 
     }
 
+    /* Lehrvortrag:
+    public static boolean isLeapYear(int year, boolean showPrintMessages){
 
-    /*public static boolean istSchaltjahr (int year, boolean showPrintMessage) {
-        if (year% 100 == 0) {
-            if ( year % 400 == 0) {
-                System.out.println(year + " is a Leap Year");
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                if (showPrintMessages)
+                    System.out.println(year + " is a leap year");
+
+                return true;
             }
         }
-        return year;
+        else {
+            if (year % 4 == 0){
+                if (showPrintMessages)
+                    System.out.println(year + " is a leap year");
+
+                return true;
+            }
+        }
+        return false;
     }
 
-     */
+    */
+
+
 
     public static void isLeapYear (int year) {
 
@@ -69,6 +86,6 @@ public class Schaltjahr {
             }
         }
         return counter;
-
     }
+
 }
