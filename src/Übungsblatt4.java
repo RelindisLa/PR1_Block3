@@ -9,13 +9,14 @@ public class Übungsblatt4 {
         Erstellen Sie hierzu eine neue Klasse
         und lösen Sie die Aufgabenstellung direkt in der Main-Methode
          */
+        System.out.print("Nummern von 1 bis 100: " + Arrays.toString(printNumbersOneToHWhile()));
+
+        System.out.println();
+        System.out.print("Nummern von 100 bis 0: ");
+        printNumbersHToOneWhile();
+
         resultEx5String();
         resultEx5();
-
-        System.out.println("Nummern von 1 bis 100: " + Arrays.toString(printNumbersOneToHWhile()));
-        //System.out.println("Nummern von 1 bis 100: " + printNumbersOneToHFor());
-
-        System.out.println("Nummern von 100 bis 1: " + Arrays.toString(printNumbersHToOneWhile()));
 
     }
 
@@ -32,17 +33,11 @@ public class Übungsblatt4 {
         return gefundeneZahlen;
     }
 
-    public static int[] printNumbersHToOneWhile() {
-        int sum = 0, counter = 100, i = 100;
-
-        int [] gefundeneZahlen = new int [100];
-
-        while ( i >= 1 ) {
-            i--;
-            counter--;
-            gefundeneZahlen[counter] = i;
+    public static void printNumbersHToOneWhile() {
+        //Zähle von 100 bis 0
+        for (int i = 100; i >= 0; i--) {
+            System.out.print(i);
         }
-        return gefundeneZahlen;
     }
 
     /*public static int[] printNumbersOneToHFor() {
@@ -61,17 +56,18 @@ public class Übungsblatt4 {
     public static void resultEx5 () {
 
         for (int zeile = 0; zeile <= 9; zeile++) {
-            System.out.println();
-            for (int i = 0; i <= 9; i++) {
+            System.out.print("Zeile: " + zeile + ": ");
+            for (int i = 0; i <= zeile; i++) {
                 System.out.print(i + ", ");
             }
+            System.out.println();
         }
 
     }
 
     public static void resultEx5String () {
         String zeile = "Zeile: ";
-        for (int i =0; i <= 9; i ++) {
+        for (int i = 0; i <= 9; i ++) {
             zeile = zeile +i + ", ";
             System.out.println(zeile);}
 
