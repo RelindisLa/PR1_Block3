@@ -1,4 +1,4 @@
-package Übungen.Rechnen;
+package Übungen.Rechnen_1;
 
 public class Zinsrechner {
 

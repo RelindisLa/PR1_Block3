@@ -1,4 +1,4 @@
-package Übungen.Übungen_3;
+package Übungen.Arrays_2;
 
 import java.util.Arrays;
 
@@ -66,9 +66,7 @@ public class ExerciseNumbers {
 
     // TODO 4: Write a method, calculating and returning the average over all numbers
     public static int findAverage(int[] arr) {
-
-        int average = findSumme(arr) / arr.length;
-        return average;
+        return findSumme(arr) / arr.length;
     }
 
 

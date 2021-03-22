@@ -1,8 +1,8 @@
-package Übungen.Übungen_4;
+package Übungen.NarzVollkZahlen_4;
 
 import java.util.Arrays;
 
-public class Übungsblatt4 {
+public class Ubungsblatt_4 {
 
     public static void main(String[] args) {
         /*Geben Sie alle Zahlen zwischen 1 und 100

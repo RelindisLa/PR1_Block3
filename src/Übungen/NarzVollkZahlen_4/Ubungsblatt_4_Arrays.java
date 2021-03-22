@@ -1,8 +1,8 @@
-package Übungen.Übungen_4;
+package Übungen.NarzVollkZahlen_4;
 
 import java.util.Arrays;
 
-public class Übungsblatt4Arrays {
+public class Ubungsblatt_4_Arrays {
 
     public static void main(String[] args) {
 

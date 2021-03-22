@@ -1,4 +1,4 @@
-package Übungen.Übungen_4;
+package Übungen.NarzVollkZahlen_4;
 
 public class VolkommeneZahlen {
 

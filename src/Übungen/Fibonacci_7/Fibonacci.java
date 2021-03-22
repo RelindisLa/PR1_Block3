@@ -1,4 +1,4 @@
-package Übungen.Übungen_7;
+package Übungen.Fibonacci_7;
 
 public class Fibonacci {
 

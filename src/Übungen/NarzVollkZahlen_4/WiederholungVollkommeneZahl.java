@@ -1,4 +1,4 @@
-package Übungen.Übungen_4;
+package Übungen.NarzVollkZahlen_4;
 
 public class WiederholungVollkommeneZahl {
 
@@ -28,10 +28,12 @@ public class WiederholungVollkommeneZahl {
      */
 
     public static boolean isPerfectNumber (int number){
-        if (number == calcDivisors(number)) {
+        return number == calcDivisors(number);
+        /* if (number == calcDivisors(number)) {
             return true;
         }
         return false;
+        */
 
     }
 
