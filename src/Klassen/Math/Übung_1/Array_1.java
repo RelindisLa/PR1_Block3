@@ -30,17 +30,26 @@ public class Array_1 {
 
         System.out.println(Arrays.toString(array1));
         System.out.println(Arrays.toString(array2));
-        System.out.println("Mulipliziere je den ersten, zweiten u dritten Wert der Arrays miteinander: ");
+        System.out.println("Addiere je den ersten, zweiten u dritten Wert der Arrays miteinander: ");
 
-        int sum1=0, prod=1;
+        int sum1=0, sum2=0;
         for (int i = 0; i < array1.length; i++) {
             sum1=sum1+array1[i];
         }
         for (int i = 0; i < array2.length; i++) {
-            prod=prod+array2[i];
+            sum2=sum2+array2[i];
         }
         System.out.println("sum1 = " + sum1);
-        System.out.println("sum2 = " + prod);
+        System.out.println("sum2 = " + sum2);
+        System.out.println();
+        System.out.println("Multipliziere je den ersten, zweiten u dritten Wert der Arrays miteinander: ");
+
+        for (int i = 0; i < array1.length; i++) {
+            System.out.println(array1[i] * array2[i]);
+            }
+
+        System.out.println();
+
 
 
         String[] monate = {"Jan", "Feb", "März", "April", "Mai", "Juni", "Juli", "Aug", "Sept", "Okt", "Nov", "Dez"};
