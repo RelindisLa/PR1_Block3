@@ -1,4 +1,4 @@
-package Übungen;
+package Übungen.Übungen_8;
 
 public class ArrayDemo2D {
 
